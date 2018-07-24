@@ -15,6 +15,7 @@ import javax.annotation.Resource;
  * @email 838985328@qq.com
  * @date
  */
+@Deprecated
 @Service
 public class UserService {
 

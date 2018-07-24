@@ -14,6 +14,7 @@ import org.apache.ibatis.annotations.Select;
 * @email 838985328@qq.com 
 * @date  
 */
+@Deprecated
 @Mapper
 public interface UserDao {
 

@@ -1,9 +1,9 @@
 package com.example.miaosha.model;
 
-
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
 * @file
@@ -14,12 +14,15 @@ import lombok.Setter;
 * @date  
 */
 
-@Deprecated
 @Getter
 @Setter
 @EqualsAndHashCode
-public class User {
-        private Integer id;
-        private String name;
+@ToString
+public class MSOrder {
+
+    private Long id;
+    private Long userId;
+    private Long orderId;
+    private Long goodsId;
 
 }

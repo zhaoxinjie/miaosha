@@ -1,9 +1,11 @@
 package com.example.miaosha.model;
 
-
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+
+import java.util.Date;
 
 /**
 * @file
@@ -14,12 +16,16 @@ import lombok.Setter;
 * @date  
 */
 
-@Deprecated
 @Getter
 @Setter
 @EqualsAndHashCode
-public class User {
-        private Integer id;
-        private String name;
+@ToString
+public class MSGoods {
+
+    private Long id;
+    private Long goodsId;
+    private Integer stockCount;
+    private Date startDate;
+    private Date endDate;
 
 }

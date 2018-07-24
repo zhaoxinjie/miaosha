@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 
@@ -41,8 +42,8 @@ public class LoginController {
 
     @RequestMapping("/do_login")
     @ResponseBody
-    public Result<Boolean> doLogin(@Valid LoginVO loginVO) {
-        msUserService.login(loginVO);
+    public Result<Boolean> doLogin(HttpServletResponse response, @Valid LoginVO loginVO) {
+        msUserService.login(response,loginVO);
         //出异常会被捕捉，验证有jsr303验证
         return Result.success(true);
 
