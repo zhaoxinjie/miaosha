@@ -1,7 +1,14 @@
 package com.example.miaosha.utils;
 
 import org.apache.commons.codec.digest.DigestUtils;
-
+/** 
+* @file MD5Util.java 
+* @CopyRight (C) zhaoxinjie2016@gmail.com
+* @brief  
+* @author zhao 
+* @email 838985328@qq.com 
+* @date 2018/7/25-0:56
+*/  
 public class MD5Util {
 
     private static final String salt = "1a2b3c4d";

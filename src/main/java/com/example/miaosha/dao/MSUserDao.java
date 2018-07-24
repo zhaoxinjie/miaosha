@@ -5,14 +5,14 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
-/**
-* @file
+/** 
+* @file MSUserDao.java
 * @CopyRight (C) zhaoxinjie2016@gmail.com
-* @brief
-* @author
-* @email 838985328@qq.com
-* @date
-*/
+* @brief  
+* @author zhao 
+* @email 838985328@qq.com 
+* @date 2018/7/25-0:54
+*/  
 
 @Mapper
 public interface MSUserDao {

@@ -7,14 +7,14 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import java.util.List;
 
-/**
-* @file
+/** 
+* @file WebConfig.java
 * @CopyRight (C) zhaoxinjie2016@gmail.com
 * @brief  
-* @author  
+* @author zhao 
 * @email 838985328@qq.com 
-* @date  
-*/
+* @date 2018/7/25-0:54
+*/  
 
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {

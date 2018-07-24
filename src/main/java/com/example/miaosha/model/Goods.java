@@ -5,14 +5,14 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-/**
-* @file
+/** 
+* @file Goods.java
 * @CopyRight (C) zhaoxinjie2016@gmail.com
 * @brief  
-* @author  
+* @author zhao 
 * @email 838985328@qq.com 
-* @date  
-*/
+* @date 2018/7/25-0:54
+*/  
 
 @Getter
 @Setter

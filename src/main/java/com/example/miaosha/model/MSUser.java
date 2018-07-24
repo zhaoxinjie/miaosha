@@ -7,14 +7,14 @@ import lombok.ToString;
 
 import java.util.Date;
 
-/**
-* @file
+/** 
+* @file MSUser.java
 * @CopyRight (C) zhaoxinjie2016@gmail.com
-* @brief
-* @author
-* @email 838985328@qq.com
-* @date
-*/
+* @brief  
+* @author zhao 
+* @email 838985328@qq.com 
+* @date 2018/7/25-0:55
+*/  
 
 @Getter
 @Setter

@@ -5,14 +5,14 @@ import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-/**
-* @file
+/** 
+* @file RedisConfig.java
 * @CopyRight (C) zhaoxinjie2016@gmail.com
 * @brief  
-* @author  
+* @author zhao 
 * @email 838985328@qq.com 
-* @date  
-*/
+* @date 2018/7/25-0:56
+*/  
 
 @Component
 @ConfigurationProperties(prefix="redis")

@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletResponse;
 
-/**
-* @file
+/** 
+* @file GoodsController.java
 * @CopyRight (C) zhaoxinjie2016@gmail.com
 * @brief  
-* @author  
+* @author zhao 
 * @email 838985328@qq.com 
-* @date  
-*/
+* @date 2018/7/25-0:55
+*/  
 @Controller
 @RequestMapping("/goods")
 public class GoodsController {

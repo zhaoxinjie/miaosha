@@ -2,15 +2,14 @@ package com.example.miaosha.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 
-/**
-* @file
+/** 
+* @file GoodsDao.java
 * @CopyRight (C) zhaoxinjie2016@gmail.com
 * @brief  
-* @author  
+* @author zhao 
 * @email 838985328@qq.com 
-* @date  
-*/
-
+* @date 2018/7/25-0:53
+*/  
 @Mapper
 public interface GoodsDao {
 }

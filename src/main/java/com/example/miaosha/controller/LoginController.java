@@ -16,14 +16,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 
-/**
- * @author
- * @file
- * @CopyRight (C) zhaoxinjie2016@gmail.com
- * @brief
- * @email 838985328@qq.com
- * @date
- */
+/** 
+* @file LoginController.java
+* @CopyRight (C) zhaoxinjie2016@gmail.com
+* @brief  
+* @author zhao 
+* @email 838985328@qq.com 
+* @date 2018/7/25-0:55
+*/  
 @Controller
 @RequestMapping("/login")
 @Slf4j

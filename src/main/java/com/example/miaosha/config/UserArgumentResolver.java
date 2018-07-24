@@ -15,14 +15,14 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * @author
- * @file
- * @CopyRight (C) zhaoxinjie2016@gmail.com
- * @brief
- * @email 838985328@qq.com
- * @date
- */
+/** 
+* @file UserArgumentResolver.java
+* @CopyRight (C) zhaoxinjie2016@gmail.com
+* @brief  
+* @author zhao 
+* @email 838985328@qq.com 
+* @date 2018/7/25-0:55
+*/  
 
 @Service
 public class UserArgumentResolver implements HandlerMethodArgumentResolver {

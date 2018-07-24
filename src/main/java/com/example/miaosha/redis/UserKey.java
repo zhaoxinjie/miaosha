@@ -1,18 +1,14 @@
 package com.example.miaosha.redis;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
 
-/**
-* @file
+/** 
+* @file UserKey.java
 * @CopyRight (C) zhaoxinjie2016@gmail.com
-* @brief
-* @author
-* @email 838985328@qq.com
-* @date
-*/
-
+* @brief  
+* @author zhao 
+* @email 838985328@qq.com 
+* @date 2018/7/25-0:55
+*/  
 public class UserKey extends BasePrefix{
 
     private UserKey(String prefix) {

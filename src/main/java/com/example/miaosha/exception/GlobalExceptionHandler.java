@@ -11,15 +11,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-/**
-* @file
+/** 
+* @file GlobalExceptionHandler.java
 * @CopyRight (C) zhaoxinjie2016@gmail.com
 * @brief  
-* @author  
+* @author zhao 
 * @email 838985328@qq.com 
-* @date  
-*/
-
+* @date 2018/7/25-0:54
+*/  
 @ControllerAdvice
 @ResponseBody
 public class GlobalExceptionHandler {

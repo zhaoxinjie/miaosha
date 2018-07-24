@@ -5,14 +5,14 @@ import org.springframework.util.StringUtils;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
-* @file
+/** 
+* @file ValidatorUtil.java 
 * @CopyRight (C) zhaoxinjie2016@gmail.com
 * @brief  
-* @author  
+* @author zhao 
 * @email 838985328@qq.com 
-* @date  
-*/  
+* @date 2018/7/25-0:56
+*/   
 public class ValidatorUtil {
 
     private static final Pattern mobile_pattern = Pattern.compile("1\\d{10}");

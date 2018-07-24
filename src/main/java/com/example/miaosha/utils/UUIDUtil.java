@@ -2,13 +2,13 @@ package com.example.miaosha.utils;
 
 import java.util.UUID;
 
-/**
-* @file
+/** 
+* @file UUIDUtil.java 
 * @CopyRight (C) zhaoxinjie2016@gmail.com
 * @brief  
-* @author  
+* @author zhao 
 * @email 838985328@qq.com 
-* @date  
+* @date 2018/7/25-0:56
 */  
 public class UUIDUtil {
     public static String uuid(){

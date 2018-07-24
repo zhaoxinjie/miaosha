@@ -1,13 +1,13 @@
 package com.example.miaosha.redis;
 
-/**
-* @file
+/** 
+* @file BasePrefix.java
 * @CopyRight (C) zhaoxinjie2016@gmail.com
 * @brief  
-* @author  
+* @author zhao 
 * @email 838985328@qq.com 
-* @date  
-*/
+* @date 2018/7/25-0:55
+*/  
 
 
 public abstract class BasePrefix implements Prefix{

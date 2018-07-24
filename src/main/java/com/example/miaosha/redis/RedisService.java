@@ -2,20 +2,18 @@ package com.example.miaosha.redis;
 
 import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
-import redis.clients.jedis.JedisPoolConfig;
 
-/**
- * @author
- * @file
- * @CopyRight (C) zhaoxinjie2016@gmail.com
- * @brief
- * @email 838985328@qq.com
- * @date
- */
+/** 
+* @file RedisService.java
+* @CopyRight (C) zhaoxinjie2016@gmail.com
+* @brief  
+* @author zhao 
+* @email 838985328@qq.com 
+* @date 2018/7/25-0:55
+*/  
 
 @Service
 public class RedisService {

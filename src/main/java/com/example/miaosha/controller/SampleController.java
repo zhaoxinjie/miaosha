@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
-/**
- * @author
- * @file
- * @CopyRight (C) zhaoxinjie2016@gmail.com
- * @brief
- * @email 838985328@qq.com
- * @date
- */
+/** 
+* @file SampleController.java
+* @CopyRight (C) zhaoxinjie2016@gmail.com
+* @brief  
+* @author zhao 
+* @email 838985328@qq.com 
+* @date 2018/7/25-0:55
+*/  
 @Controller
 @RequestMapping("/demo")
 public class SampleController {

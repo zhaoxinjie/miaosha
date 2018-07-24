@@ -1,14 +1,13 @@
 package com.example.miaosha.redis;
 
-/**
-* @file
+/** 
+* @file MSUserKey.java
 * @CopyRight (C) zhaoxinjie2016@gmail.com
-* @brief
-* @author
-* @email 838985328@qq.com
-* @date
-*/
-
+* @brief  
+* @author zhao 
+* @email 838985328@qq.com 
+* @date 2018/7/25-0:56
+*/  
 public class MSUserKey extends BasePrefix{
 
     private static int TOKEN_EXPIRE = 3600*24*2;
