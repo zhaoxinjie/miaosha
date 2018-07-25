@@ -2,7 +2,9 @@ package com.example.miaosha.controller;
 
 import com.example.miaosha.model.MSUser;
 import com.example.miaosha.redis.RedisService;
+import com.example.miaosha.service.GoodsService;
 import com.example.miaosha.service.MSUserService;
+import com.example.miaosha.vo.GoodsVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 /** 
 * @file GoodsController.java
@@ -31,9 +34,17 @@ public class GoodsController {
     @Autowired
     RedisService redisService;
 
+    @Autowired
+    GoodsService goodsService;
+
     @RequestMapping("/to_list")
     public String toLogin(Model model,MSUser user) {
         model.addAttribute("user", user);
+        //query goods list
+        List<GoodsVO> goodsList = goodsService.listGoodsVO();
+        model.addAttribute("goodsList", goodsList);
+
+
         return "goods_list";
     }
 

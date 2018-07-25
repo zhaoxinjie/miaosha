@@ -18,7 +18,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 * @author zhao 
 * @email 838985328@qq.com 
 * @date 2018/7/25-0:55
-*/  
+*/
+@Deprecated
 @Controller
 @RequestMapping("/demo")
 public class SampleController {

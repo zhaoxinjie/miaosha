@@ -1,8 +1,12 @@
 package com.example.miaosha.service;
 
 import com.example.miaosha.dao.GoodsDao;
+import com.example.miaosha.vo.GoodsVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 /** 
 * @file GoodsService.java 
@@ -16,7 +20,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class GoodsService {
 
-    @Autowired
+    @Resource
     GoodsDao goodsDao;
+
+    public List<GoodsVO> listGoodsVO(){
+        return goodsDao.listGoodsVO();
+    }
 
 }

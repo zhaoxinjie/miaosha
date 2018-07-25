@@ -1,6 +1,10 @@
 package com.example.miaosha.dao;
 
+import com.example.miaosha.vo.GoodsVO;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 /** 
 * @file GoodsDao.java
@@ -12,4 +16,8 @@ import org.apache.ibatis.annotations.Mapper;
 */  
 @Mapper
 public interface GoodsDao {
+
+    @Select("select g.*, mg.stock_count,mg.miaosha_price, mg.start_date, mg.end_date from " +
+            "ms_goods mg left join goods g on mg.goods_id = g.id")
+    public List<GoodsVO> listGoodsVO();
 }

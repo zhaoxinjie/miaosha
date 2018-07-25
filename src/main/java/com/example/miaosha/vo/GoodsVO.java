@@ -1,5 +1,6 @@
-package com.example.miaosha.model;
+package com.example.miaosha.vo;
 
+import com.example.miaosha.model.Goods;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -7,26 +8,23 @@ import lombok.ToString;
 
 import java.util.Date;
 
-/** 
-* @file MSGoods.java
+/**
+* @file GoodsVO.java
 * @CopyRight (C) zhaoxinjie2016@gmail.com
 * @brief  
 * @author zhao 
 * @email 838985328@qq.com 
-* @date 2018/7/25-0:54
-*/  
+* @date 2018/7/25-23:51
+*/
 
 @Getter
 @Setter
 @EqualsAndHashCode
 @ToString
-public class MSGoods {
+public class GoodsVO extends Goods {
 
-    private Long id;
-    private Long goodsId;
-    private Double miaoshaPrice;
     private Integer stockCount;
+    private Double miaoshaPrice;
     private Date startDate;
     private Date endDate;
-
 }
