@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -25,7 +26,7 @@ import java.util.List;
 * @date 2018/7/25-0:55
 */  
 @Controller
-@RequestMapping("/goods")
+@RequestMapping("goods")
 public class GoodsController {
 
     @Autowired
@@ -37,7 +38,7 @@ public class GoodsController {
     @Autowired
     GoodsService goodsService;
 
-    @RequestMapping("/to_list")
+    @RequestMapping("to_list")
     public String toLogin(Model model,MSUser user) {
         model.addAttribute("user", user);
         //query goods list
@@ -48,17 +49,35 @@ public class GoodsController {
         return "goods_list";
     }
 
-    @RequestMapping("/to_detail")
-    public String toDetail(HttpServletResponse response,Model model,
-                          @CookieValue(value = MSUserService.COOKIE_NAME_TOKEN, required = false) String cookieToken,
-                          @RequestParam(value = MSUserService.COOKIE_NAME_TOKEN, required = false) String paramToken) {
-
-        if (StringUtils.isEmpty(cookieToken) && StringUtils.isEmpty(paramToken)){
-            return "login";
-        }
-        String token = StringUtils.isEmpty(paramToken)? cookieToken : paramToken;
-        MSUser user = msUserService.getByToken(response, token);
+    @RequestMapping("to_detail/{goodsId}")
+    public String toDetail(Model model, MSUser user,
+                           @PathVariable("goodsId") Long goodsId) {
+        //snowflake 非自增id，防止人
         model.addAttribute("user", user);
-        return "goods_list";
+
+        GoodsVO goods = goodsService.getGoodsVOByGoodsId(goodsId);
+        model.addAttribute("goods", goods);
+        long startAt = goods.getStartDate().getTime();
+        long endAt = goods.getEndDate().getTime();
+        long now = System.currentTimeMillis();
+
+        int msStatus = 0;
+        int remainSeconds = 0;
+
+        if (now < startAt){
+            msStatus = 0;
+            remainSeconds = (int)(startAt-now)/1000;
+        }else if (now > endAt){
+            msStatus = 2;
+            remainSeconds = -1;
+        }else {
+            msStatus = 1;
+            remainSeconds = 0;
+        }
+
+        model.addAttribute("miaoshaStatus", msStatus);
+        model.addAttribute("remainSeconds", remainSeconds);
+
+        return "goods_detail";
     }
 }

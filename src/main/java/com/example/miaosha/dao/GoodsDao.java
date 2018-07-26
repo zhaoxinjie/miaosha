@@ -20,4 +20,8 @@ public interface GoodsDao {
     @Select("select g.*, mg.stock_count,mg.miaosha_price, mg.start_date, mg.end_date from " +
             "ms_goods mg left join goods g on mg.goods_id = g.id")
     public List<GoodsVO> listGoodsVO();
+
+    @Select("select g.*, mg.stock_count,mg.miaosha_price, mg.start_date, mg.end_date from " +
+            "ms_goods mg left join goods g on mg.goods_id = g.id where g.id = #{goodsId}")
+    public GoodsVO getGoodsVOByGoodsId(Long goodsId);
 }

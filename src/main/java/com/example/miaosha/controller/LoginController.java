@@ -25,7 +25,7 @@ import javax.validation.Valid;
 * @date 2018/7/25-0:55
 */  
 @Controller
-@RequestMapping("/login")
+@RequestMapping("login")
 @Slf4j
 public class LoginController {
 
@@ -35,12 +35,12 @@ public class LoginController {
     @Autowired
     RedisService redisService;
 
-    @RequestMapping("/to_login")
+    @RequestMapping("to_login")
     public String toLogin() {
         return "login";
     }
 
-    @RequestMapping("/do_login")
+    @RequestMapping("do_login")
     @ResponseBody
     public Result<Boolean> doLogin(HttpServletResponse response, @Valid LoginVO loginVO) {
         msUserService.login(response,loginVO);
