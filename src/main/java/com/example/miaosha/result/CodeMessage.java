@@ -33,6 +33,16 @@ public class CodeMessage {
     public static CodeMessage MOBILE_NOT_EXIST = new CodeMessage(500214, "手机号不存在");
     public static CodeMessage PASSWORD_ERROR = new CodeMessage(500215, "密码错误");
 
+
+    //商品模块5003XX
+
+
+    //订单模块5004XX
+
+    //秒杀模块5005XX
+    public static CodeMessage MIAO_SHA_OVER = new CodeMessage(500500, "商品已经秒杀完毕");
+    public static CodeMessage MIAO_SHA_REPEAT = new CodeMessage(500501, "不能重复秒杀");
+
     private CodeMessage(Integer code, String message){
         this.code = code;
         this.message = message;
