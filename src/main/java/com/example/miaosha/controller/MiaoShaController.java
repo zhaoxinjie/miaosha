@@ -49,7 +49,6 @@ public class MiaoShaController {
     public String doMiaosha(Model model, MSUser user,
                           @RequestParam("goodsId")Long goodsId) {
         model.addAttribute("user", user);
-
         if (user == null){
             return "login";
         }
@@ -60,6 +59,7 @@ public class MiaoShaController {
             model.addAttribute("errmsg", CodeMessage.MIAO_SHA_OVER.getMessage());
             return "miaosha_fail";
         }
+
 
         MSOrder order = orderService.getMSOrderByUserIdGoodsId(user.getId(), goodsId);
         if (order != null){

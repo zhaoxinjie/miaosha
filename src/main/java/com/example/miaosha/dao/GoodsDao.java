@@ -27,6 +27,6 @@ public interface GoodsDao {
             "ms_goods mg left join goods g on mg.goods_id = g.id where g.id = #{goodsId}")
     public GoodsVO getGoodsVOByGoodsId(Long goodsId);
 
-    @Update("update ms_goods set stock_count = stock_count - 1 where goods_id = #{goods_id}")
+    @Update("update ms_goods set stock_count = stock_count - 1 where goods_id = #{id}")
     public int reduceStock(MSGoods g);
 }

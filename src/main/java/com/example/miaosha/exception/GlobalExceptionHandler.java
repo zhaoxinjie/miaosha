@@ -35,6 +35,7 @@ public class GlobalExceptionHandler {
             String msg = objectError.getDefaultMessage();
             return Result.fail(CodeMessage.BIND_ERROR.fillArgs(msg));
         }else {
+            ex.printStackTrace();
             return Result.fail(CodeMessage.SERVER_ERROR);
         }
     }
